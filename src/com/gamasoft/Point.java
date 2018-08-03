@@ -1,5 +1,6 @@
 package com.gamasoft;
 
+
 final __ByValue class Point {
     public final int x;
     public final int y;
