@@ -10,8 +10,12 @@ final __ByValue class Point {
         this.y = y;
     }
 
-    public boolean equals(Point that) {
-        return this.x == that.x && this.y == that.y;
+//    public boolean equals(Point that) {
+//        return this.x == that.x && this.y == that.y;
+//    }
+
+    public String desc(String msg) {
+        return msg + " x:" + x + " y:" + y;
     }
 
     private Point() {
@@ -38,6 +42,10 @@ final __ByValue class Point {
         Point p2 = of(p.x + dx, p.y + dy);
         assert(!p.equals(p2));
         return p2;
+    }
+
+    public Point displace(int dx, int dy) {
+        return Point.displace(this, dx, dy);
     }
 
 //    public __Flattenable final Value1 value;
