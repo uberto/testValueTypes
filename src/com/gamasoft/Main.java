@@ -1,5 +1,8 @@
 package com.gamasoft;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
 //reference:
@@ -10,6 +13,29 @@ public class Main {
 
     public static void main(String[] args) {
 
+        pointTest();
+
+        animalTest();
+    }
+
+    private static void animalTest() {
+        var d = new Dog("Lassie");
+        var c = new Cat("Ginger");
+        var s = new Shark();
+
+//        List<Dog> dogList = new ArrayList<>(); don't compile
+//        dogList.add(d);
+
+        List<Animal> animalList = new ArrayList<>();
+        animalList.add(d);
+        animalList.add(c);
+        animalList.add(s);
+
+        System.out.println(animalList);
+        animalList.forEach(x -> System.out.println(" sound " + x.sound()));
+    }
+
+    private static void pointTest() {
         var p1 = Point.of(5,5);
         var p2 = new Point(5,5); //it calls MakeValue
 //        p2.x = 6   //doesn't compile
