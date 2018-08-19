@@ -17,6 +17,9 @@ public class Main {
 //https://wiki.openjdk.java.net/display/valhalla/L-World+Value+Types+Command-line+Options
 
 
+//You need to compile with javac -XDallowGenericsOverValues flag
+
+
     public static void main(String[] args) {
 
         pointTest();
