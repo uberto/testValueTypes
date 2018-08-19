@@ -1,13 +1,13 @@
-package com.gamasoft;
+package com.gamasoft.animals;
 
-final __ByValue  class Cat implements Animal {
-
+__ByValue public class Dog implements Animal {
 
     public final String name;
 
-    Cat(String name) {
+    public Dog(String name) {
         this.name = name;
     }
+
 
     @Override
     public String name() {
@@ -16,6 +16,6 @@ final __ByValue  class Cat implements Animal {
 
     @Override
     public String sound() {
-        return "meow";
+        return "woof";
     }
 }

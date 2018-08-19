@@ -1,5 +1,7 @@
 package com.gamasoft;
 
+import com.gamasoft.animals.Animal;
+
 public class Shark implements Animal {
     @Override
     public String name() {

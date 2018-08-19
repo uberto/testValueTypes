@@ -1,7 +1,13 @@
 package com.gamasoft;
 
+import com.gamasoft.animals.Animal;
+import com.gamasoft.animals.Cat;
+import com.gamasoft.animals.Dog;
+
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
 
@@ -33,6 +39,23 @@ public class Main {
 
         System.out.println(animalList);
         animalList.forEach(x -> System.out.println(" sound " + x.sound()));
+
+//        System.out.println(c.isValue());
+
+        Set<Animal> animalSet = new HashSet<>();
+        animalSet.add(d);
+        animalSet.add(c);
+        animalSet.add(s);
+
+        System.out.println(animalSet);
+
+
+        Set<Cat> catSet = new HashSet<>();
+        catSet.add(new Cat("Tom"));
+        catSet.add(new Cat("Jerry"));
+        catSet.add(new Cat("Silvester"));
+
+        System.out.println(catSet);
     }
 
     private static void pointTest() {
@@ -51,6 +74,8 @@ public class Main {
         System.out.println(p1.equals(p3)); //false
         System.out.println(p1.desc("my message")); //my message x:5 y:5 ???
         System.out.println(p4.equals(p3)); //true
+
+
     }
 
 
