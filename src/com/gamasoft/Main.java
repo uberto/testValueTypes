@@ -3,11 +3,10 @@ package com.gamasoft;
 import com.gamasoft.animals.Animal;
 import com.gamasoft.animals.Cat;
 import com.gamasoft.animals.Dog;
+import com.gamasoft.tree.Branch;
+import com.gamasoft.tree.Root;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
 
@@ -25,6 +24,25 @@ public class Main {
         pointTest();
 
         animalTest();
+
+        treeTest();
+    }
+
+    private static void treeTest() {
+        Root r = new Root();
+        Branch b1 = new Branch(r, Collections.emptySet());
+        Branch b2 = new Branch(r, Set.of(1,2,3));
+        Branch b11 = new Branch(b1, Set.of(10,11));
+        Branch b21 = new Branch(b2, Set.of(20,21));
+        Branch b31 = new Branch(b21, Set.of(100, 101));
+
+
+        System.out.println(b31.walkToRoot());
+
+        b21.values.add(1000);
+
+        System.out.println(b21.walkToRoot());
+
     }
 
     private static void animalTest() {
@@ -62,7 +80,7 @@ public class Main {
     }
 
     private static void pointTest() {
-        var p1 = Point.of(5,5);
+        var p1 = new Point(5,5);
         var p2 = new Point(5,5); //it calls MakeValue
 //        p2.x = 6   //doesn't compile
         var p3 = Point.displace(p1, 2,-2);

@@ -1,7 +1,7 @@
 package com.gamasoft;
 
 
-final __ByValue class Point {
+final value class Point {
     public final int x;
     public final int y;
 
@@ -23,15 +23,15 @@ final __ByValue class Point {
         this.y =  0;
     }
 
-    public static Point of(int x, int y) {
-        Point v = __MakeDefault Point();
-        v = __WithField(v.x, x);
-        v = __WithField(v.y, y);
-        return v;
-    }
+//    public static Point of(int x, int y) {
+//        Point v = __MakeDefault Point();
+//        v = __WithField(v.x, x);
+//        v = __WithField(v.y, y);
+//        return v;
+//    }
 
 
-    static Point origin = of(0, 0);
+    static Point origin = new Point(0, 0);
 //    static Point origin = __MakeValue(0, 0);
     static String stringValueOf(Point p) {
         return "Point("+p.x+","+p.y+")";
@@ -39,7 +39,7 @@ final __ByValue class Point {
     static Point displace(Point p, int dx, int dy) {
         if (dx == 0 && dy == 0)
             return p;
-        Point p2 = of(p.x + dx, p.y + dy);
+        Point p2 = new Point(p.x + dx, p.y + dy);
         assert(!p.equals(p2));
         return p2;
     }

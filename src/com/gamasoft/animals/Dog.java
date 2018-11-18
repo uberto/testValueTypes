@@ -1,6 +1,6 @@
 package com.gamasoft.animals;
 
-__ByValue public class Dog implements Animal {
+value public class Dog implements Animal {
 
     public final String name;
 

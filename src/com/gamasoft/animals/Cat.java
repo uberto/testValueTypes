@@ -1,6 +1,6 @@
 package com.gamasoft.animals;
 
-__ByValue  public class Cat implements Animal {
+value  public class Cat implements Animal {
 
 
     public final String name;
@@ -19,9 +19,9 @@ __ByValue  public class Cat implements Animal {
         return "meow";
     }
 
-    @Override
-    public String toString() {
-
-        return super.toString() +  "  Cat Value " + name;
-    }
+//    @Override
+//    public String toString() {
+//
+//        return super.toString() +  "  Cat Value " + name;
+//    }
 }
