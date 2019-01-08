@@ -23,24 +23,24 @@ final value class Point {
         this.y =  0;
     }
 
-//    public static Point of(int x, int y) {
-//        Point v = __MakeDefault Point();
-//        v = __WithField(v.x, x);
-//        v = __WithField(v.y, y);
-//        return v;
-//    }
+    public static Point of(int x, int y) {
+        Point p = Point.default;
+        p = __WithField(p.x, x); //WithField operator is allowed only with -XDallowWithFieldOperator
+        p = __WithField(p.y, y);
+        return p;
+    }
 
 
     static Point origin = new Point(0, 0);
-//    static Point origin = __MakeValue(0, 0);
+
     static String stringValueOf(Point p) {
         return "Point("+p.x+","+p.y+")";
     }
     static Point displace(Point p, int dx, int dy) {
         if (dx == 0 && dy == 0)
             return p;
+
         Point p2 = new Point(p.x + dx, p.y + dy);
-        assert(!p.equals(p2));
         return p2;
     }
 
@@ -48,6 +48,5 @@ final value class Point {
         return Point.displace(this, dx, dy);
     }
 
-//    public __Flattenable final Value1 value;
 
 }

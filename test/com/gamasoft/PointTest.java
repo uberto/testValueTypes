@@ -23,7 +23,11 @@ class PointTest {
 
         var points = createArray();
 
+        System.out.println(points);
+
+
         assertEquals(1000, points.length);
+
     }
 
 
