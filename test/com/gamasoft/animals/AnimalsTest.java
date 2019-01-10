@@ -11,12 +11,9 @@ public class AnimalsTest {
 
     @Test
     public void collectionsTest() {
-        var d = new Dog("Lassie");
-        var c = new Cat("Ginger");
-        var s = new Shark();
-
-//        List<Dog> dogList = new ArrayList<>(); don't compile
-//        dogList.add(d);
+        var d = new Dog("Lassie"); //VT
+        var c = new Cat("Ginger"); //VT
+        var s = new Shark(); //Object
 
         List<Animal> animalList = new ArrayList<>();
         animalList.add(d);
@@ -26,7 +23,7 @@ public class AnimalsTest {
         System.out.println(animalList);
         animalList.forEach(x -> System.out.println(" sound " + x.sound()));
 
-//        System.out.println(c.isValue());
+     //   System.out.println(c.isValue());
 
         Set<Animal> animalSet = new HashSet<>();
         animalSet.add(d);

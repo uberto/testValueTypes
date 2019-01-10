@@ -9,6 +9,7 @@ public class TreeTest {
 
     @Test
     public void recursiveCalls() {
+
         Root r = new Root();
         Branch b1 = new Branch(r, Collections.emptySet());
         Branch b2 = new Branch(r, Set.of(1,2,3));

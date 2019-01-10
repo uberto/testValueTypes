@@ -14,10 +14,6 @@ class SharkTest {
 
         var sharks = new Shark[1000];
 
-
-        var points = new Point[1000];
-
-
         assertEquals(1000, sharks.length);
     }
 
