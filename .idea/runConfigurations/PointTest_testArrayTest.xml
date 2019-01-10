@@ -1,0 +1,20 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="PointTest.testArrayTest" type="JUnit" factoryName="JUnit" singleton="true" nameIsGenerated="true">
+    <module name="testValueTypes" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.gamasoft.animals.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="com.gamasoft.geometric" />
+    <option name="MAIN_CLASS_NAME" value="com.gamasoft.geometric.PointTest" />
+    <option name="METHOD_NAME" value="testArrayTest" />
+    <option name="TEST_OBJECT" value="method" />
+    <option name="VM_PARAMETERS" value="-ea -XX:+EnableValhalla" />
+    <option name="PARAMETERS" value="" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -1,7 +1,6 @@
-package com.gamasoft;
+package com.gamasoft.animals;
 
-import com.gamasoft.animals.Animal;
-
+//not a value type
 public class Shark implements Animal {
     @Override
     public String name() {

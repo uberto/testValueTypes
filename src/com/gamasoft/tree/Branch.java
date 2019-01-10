@@ -16,12 +16,8 @@ public value class Branch implements Node {
 
     @Override
     public String walkToRoot() {
-//        return "Branch ["
-//                + values.stream().map(String::valueOf).collect(Collectors.joining(","))
-//                + "] "
-//                + parent.walkToRoot();
         return "Branch ["
-                + values.stream().map(x -> x.toString()).collect(Collectors.joining(","))
+                + values.stream().map(Object::toString).collect(Collectors.joining(","))
                 + "] "
                 + parent.walkToRoot();
 

@@ -1,13 +1,20 @@
-package com.gamasoft;
+package com.gamasoft.geometric;
 
 
-final value class Point {
+public final value class Point {
     public final int x;
     public final int y;
 
     public Point(int x, int y) {
         this.x = x;
         this.y = y;
+    }
+
+    public static Point of(int x, int y) {
+        Point p = Point.default;
+        Point p1 = __WithField(p.x, x); //WithField operator is allowed only with -XDallowWithFieldOperator
+        Point p2 = __WithField(p1.y, y);
+        return p2;
     }
 
 //    public boolean equals(Point that) {
@@ -22,21 +29,12 @@ final value class Point {
         this.x =  0;
         this.y =  0;
     }
+    public static Point origin = new Point(0, 0);
 
-    public static Point of(int x, int y) {
-        Point p = Point.default;
-        p = __WithField(p.x, x); //WithField operator is allowed only with -XDallowWithFieldOperator
-        p = __WithField(p.y, y);
-        return p;
-    }
-
-
-    static Point origin = new Point(0, 0);
-
-    static String stringValueOf(Point p) {
+    public static String stringValueOf(Point p) {
         return "Point("+p.x+","+p.y+")";
     }
-    static Point displace(Point p, int dx, int dy) {
+    public static Point displace(Point p, int dx, int dy) {
         if (dx == 0 && dy == 0)
             return p;
 

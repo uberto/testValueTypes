@@ -1,7 +1,6 @@
 package com.gamasoft.animals;
 
-value  public class Cat implements Animal {
-
+public value  class Cat implements Animal {
 
     public final String name;
 
@@ -11,6 +10,7 @@ value  public class Cat implements Animal {
 
     @Override
     public String name() {
+//        return super.toString(); //Error: value types do not support invocation of super.toString
         return name;
     }
 
@@ -19,9 +19,4 @@ value  public class Cat implements Animal {
         return "meow";
     }
 
-//    @Override
-//    public String toString() {
-//
-//        return super.toString() +  "  Cat Value " + name;
-//    }
 }

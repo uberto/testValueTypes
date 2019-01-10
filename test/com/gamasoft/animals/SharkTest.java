@@ -1,5 +1,7 @@
-package com.gamasoft;
+package com.gamasoft.animals;
 
+import com.gamasoft.animals.Shark;
+import com.gamasoft.geometric.Point;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

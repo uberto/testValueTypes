@@ -1,8 +1,9 @@
-package com.gamasoft;
+package com.gamasoft.geometric;
 
 public value class Line {
     public __Flattenable final Point startPoint;
     public __Flattenable final Point endPoint;
+    //__Flattenable: This modifier is allowed only with -XDallowFlattenabilityModifiers
 
     public Line(Point p1, Point p2) {
         this.startPoint = p1;
@@ -15,5 +16,6 @@ public value class Line {
 
         return Math.sqrt(dx*dx+dy*dy);
     }
-    //__Flattenable: This modifier is allowed only with -XDallowFlattenabilityModifiers
+
+
 }

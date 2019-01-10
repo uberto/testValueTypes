@@ -1,13 +1,12 @@
 package com.gamasoft.animals;
 
-value public class Dog implements Animal {
+public value class Dog implements Animal {
 
     public final String name;
 
     public Dog(String name) {
         this.name = name;
     }
-
 
     @Override
     public String name() {
