@@ -7,6 +7,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class AnimalsTest {
 
     @Test
@@ -49,10 +51,17 @@ public class AnimalsTest {
         var d = new Dog("Lassie"); //VT
         var s = new Shark(); //Object
 
+ //       d.notify(); //Error: value types do not support notify
+
         lockedMethod(s);
-        lockedMethod(d); //Runtime error
+
+        try {
+            lockedMethod(d); //Runtime error
 //        java.lang.IllegalMonitorStateException: com.gamasoft.animals.Dog
 
+        } catch (IllegalMonitorStateException e) {
+            assertEquals("com.gamasoft.animals.Dog", e.getMessage());
+        }
     }
 
     private void lockedMethod(Object toBeLockedOn){
