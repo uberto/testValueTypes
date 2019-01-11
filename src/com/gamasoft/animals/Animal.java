@@ -5,4 +5,8 @@ public interface Animal {
 
     String sound();
 
+    default void defMethod() {
+        System.out.println("hello");
+    }
+
 }

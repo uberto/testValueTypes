@@ -15,6 +15,8 @@ public class AnimalsTest {
         var c = new Cat("Ginger"); //VT
         var s = new Shark(); //Object
 
+        c.defMethod();
+
         List<Animal> animalList = new ArrayList<>();
         animalList.add(d);
         animalList.add(c);
@@ -41,6 +43,29 @@ public class AnimalsTest {
         System.out.println(catSet);
     }
 
+    @Test
+    public void locks(){
+
+        var d = new Dog("Lassie"); //VT
+        var s = new Shark(); //Object
+
+        lockedMethod(s);
+        lockedMethod(d); //Runtime error
+//        java.lang.IllegalMonitorStateException: com.gamasoft.animals.Dog
+
+    }
+
+    private void lockedMethod(Object toBeLockedOn){
+
+        System.out.println("Start locking");
+        synchronized (toBeLockedOn){
+
+            System.out.println("locked on " + toBeLockedOn);
+
+        }
+        System.out.println("Released locking");
+
+    }
 
 
 }
