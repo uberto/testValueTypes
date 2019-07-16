@@ -1,5 +1,8 @@
 package com.ubertob;
 
+import com.ubertob.animals.Cat;
+import com.ubertob.examples.BrowseTree;
+import com.ubertob.examples.Metadata;
 import com.ubertob.tree.Branch;
 import com.ubertob.tree.Root;
 
@@ -34,19 +37,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Root r = new Root();
-        Branch b1 = new Branch(r, Collections.emptySet());
-        Branch b2 = new Branch(r, Set.of(1,2,3));
-        Branch b11 = new Branch(b1, Set.of(10,11));
-        Branch b21 = new Branch(b2, Set.of(20,21));
-        Branch b31 = new Branch(b21, Set.of(100, 101));
+        BrowseTree.recursiveCalls();
 
 
-        System.out.println(b31.walkToRoot());
-
-        b21.values.add(1000);
-
-        System.out.println(b21.walkToRoot());
+        System.out.println("\n\nInline Type Cat " + Metadata.extractClassMetadata(Cat.class));
+        System.out.println("\n\nNormal class Shark " + Metadata.extractClassMetadata(Cat.class));
     }
 
 

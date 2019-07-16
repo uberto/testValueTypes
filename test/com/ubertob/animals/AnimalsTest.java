@@ -27,7 +27,7 @@ public class AnimalsTest {
         System.out.println(animalList);
         animalList.forEach(x -> System.out.println(" sound " + x.sound()));
 
-     //   System.out.println(c.isValue());
+//        System.out.println(c.isValue());
 
         Set<Animal> animalSet = new HashSet<>();
         animalSet.add(d);
