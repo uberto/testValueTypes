@@ -1,4 +1,4 @@
-package com.gamasoft.animals;
+package com.ubertob.animals;
 
 //not a value type
 public class Shark implements Animal {

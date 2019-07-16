@@ -1,4 +1,4 @@
-package com.gamasoft.animals;
+package com.ubertob.animals;
 
 public interface Animal {
     String name();

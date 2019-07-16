@@ -1,9 +1,12 @@
-package com.gamasoft.geometric;
+package com.ubertob.geometric;
 
-public value class Line {
-    public __Flattenable final Point startPoint;
-    public __Flattenable final Point endPoint;
+public inline class Line {
+//    public __Flattenable final Point startPoint;
+//    public __Flattenable final Point endPoint;
     //__Flattenable: This modifier is allowed only with -XDallowFlattenabilityModifiers
+    public final Point startPoint;
+    public final Point endPoint;
+    //__Flattenable not needed in LW2 ?
 
     public Line(Point p1, Point p2) {
         this.startPoint = p1;

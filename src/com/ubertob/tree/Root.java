@@ -1,6 +1,6 @@
-package com.gamasoft.tree;
+package com.ubertob.tree;
 
-public value class Root implements Node {
+inline public class Root implements Node {
 
    final private String name = "root"; //does not compile without a field
 

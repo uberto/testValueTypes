@@ -1,4 +1,4 @@
-package com.gamasoft.geometric;
+package com.ubertob.geometric;
 
 import org.junit.jupiter.api.Test;
 
@@ -6,6 +6,14 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
+
+// LW2
+//    Point, Point?
+//    Point - QPoint; descriptor - is a zero-default inline class: identity-free, immutable
+//         -  null-free, flattenable
+//    Point? - LPoint; descriptor - is STILL an inline class - identity-free, immutable
+//           - nullable, not flattenable
 
 
 class PointTest {
@@ -37,9 +45,9 @@ class PointTest {
         var p4 = p1.displace(2,-2);
 
 
-        assertEquals("[value class com.gamasoft.geometric.Point, 5, 5]", p1.toString());
-        System.out.println(p2); //[value class com.gamasoft.geometric.Point, 5, 5]
-        System.out.println(p3); //[value class com.gamasoft.geometric.Point, 7, 3]
+        assertEquals("[value class com.ubertob.geometric.Point, 5, 5]", p1.toString());
+        System.out.println(p2); //[value class com.ubertob.geometric.Point, 5, 5]
+        System.out.println(p3); //[value class com.ubertob.geometric.Point, 7, 3]
 
 
     }
@@ -50,7 +58,7 @@ class PointTest {
 
         var list = new ArrayList<Point>();
         list.add(Point.of(3, 4));
-//        list.add(null); //Error: incompatible types: <nulltype> cannot be converted to com.gamasoft.geometric.Point
+//        list.add(null); //Error: incompatible types: <nulltype> cannot be converted to com.ubertob.geometric.Point
 
         assertEquals(1, list.size());
         assertEquals(new Point(3, 4), list.get(0));

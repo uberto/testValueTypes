@@ -1,6 +1,6 @@
-package com.gamasoft.animals;
+package com.ubertob.animals;
 
-public value  class Cat implements Animal {
+public inline  class Cat implements Animal {
 
     public final String name;
 

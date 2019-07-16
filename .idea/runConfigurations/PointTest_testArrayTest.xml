@@ -3,12 +3,12 @@
     <module name="testValueTypes" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="com.gamasoft.animals.*" />
+        <option name="PATTERN" value="com.ubertob.animals.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>
-    <option name="PACKAGE_NAME" value="com.gamasoft.geometric" />
-    <option name="MAIN_CLASS_NAME" value="com.gamasoft.geometric.PointTest" />
+    <option name="PACKAGE_NAME" value="com.ubertob.geometric" />
+    <option name="MAIN_CLASS_NAME" value="com.ubertob.geometric.PointTest" />
     <option name="METHOD_NAME" value="testArrayTest" />
     <option name="TEST_OBJECT" value="method" />
     <option name="VM_PARAMETERS" value="-ea -XX:+EnableValhalla" />

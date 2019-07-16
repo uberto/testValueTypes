@@ -1,4 +1,4 @@
-package com.gamasoft.animals;
+package com.ubertob.animals;
 
 import org.junit.jupiter.api.Test;
 
@@ -57,10 +57,10 @@ public class AnimalsTest {
 
         try {
             lockedMethod(d); //Runtime error
-//        java.lang.IllegalMonitorStateException: com.gamasoft.animals.Dog
+//        java.lang.IllegalMonitorStateException: com.ubertob.animals.Dog
 
         } catch (IllegalMonitorStateException e) {
-            assertEquals("com.gamasoft.animals.Dog", e.getMessage());
+            assertEquals("com.ubertob.animals.Dog", e.getMessage());
         }
     }
 

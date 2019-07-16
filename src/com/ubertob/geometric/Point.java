@@ -1,7 +1,7 @@
-package com.gamasoft.geometric;
+package com.ubertob.geometric;
 
 
-public final value class Point {
+public final inline class Point {
     public final int x;
     public final int y;
 

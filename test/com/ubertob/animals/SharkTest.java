@@ -1,6 +1,5 @@
-package com.gamasoft.animals;
+package com.ubertob.animals;
 
-import com.gamasoft.animals.Shark;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

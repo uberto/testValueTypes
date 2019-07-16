@@ -1,4 +1,4 @@
-package com.gamasoft.tree;
+package com.ubertob.tree;
 
 import org.junit.jupiter.api.Test;
 
