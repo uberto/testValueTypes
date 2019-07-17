@@ -1,14 +1,11 @@
 package com.ubertob.geometric;
 
-public inline class Line {
-//    public __Flattenable final Point startPoint;
-//    public __Flattenable final Point endPoint;
-    //__Flattenable: This modifier is allowed only with -XDallowFlattenabilityModifiers
-    public final Point startPoint;
-    public final Point endPoint;
-    //__Flattenable not needed in LW2 ?
+ inline public class Line {
 
-    public Line(Point p1, Point p2) {
+    public final CoordInlined startPoint;
+    public final CoordInlined endPoint;
+
+    public Line(CoordInlined p1, CoordInlined p2) {
         this.startPoint = p1;
         this.endPoint = p2;
     }

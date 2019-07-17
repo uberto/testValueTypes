@@ -1,7 +1,7 @@
 package com.ubertob.geometric;
 
 
-public final inline class Point {
+inline public class Point {
     public final int x;
     public final int y;
 
@@ -17,23 +17,17 @@ public final inline class Point {
         return p2;
     }
 
-//    public boolean equals(Point that) {
-//        return this.x == that.x && this.y == that.y;
-//    }
-
-    public String desc(String msg) {
-        return msg + " x:" + x + " y:" + y;
-    }
-
     private Point() {
         this.x =  0;
         this.y =  0;
     }
-    public static Point origin = new Point(0, 0);
 
-    public static String stringValueOf(Point p) {
-        return "Point("+p.x+","+p.y+")";
-    }
+    public static Point origin() { return new Point(0, 0); }
+
+
+//    public static Point origin = new Point(0, 0);//Exception in thread "main" java.lang.ClassCircularityError: com/ubertob/geometric/Point
+
+
     public static Point displace(Point p, int dx, int dy) {
         if (dx == 0 && dy == 0)
             return p;
@@ -45,6 +39,5 @@ public final inline class Point {
     public Point displace(int dx, int dy) {
         return Point.displace(this, dx, dy);
     }
-
 
 }

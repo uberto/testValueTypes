@@ -1,12 +1,11 @@
 package com.ubertob;
 
 import com.ubertob.animals.Cat;
+import com.ubertob.animals.Shark;
 import com.ubertob.examples.BrowseTree;
+import com.ubertob.examples.FlattenArrays;
+import com.ubertob.examples.Generics;
 import com.ubertob.examples.Metadata;
-import com.ubertob.tree.Branch;
-import com.ubertob.tree.Root;
-
-import java.util.*;
 
 public class Main {
 
@@ -40,8 +39,17 @@ public class Main {
         BrowseTree.recursiveCalls();
 
 
+        System.out.println("\n\nNormal class Shark " + Metadata.extractClassMetadata(Shark.class));
         System.out.println("\n\nInline Type Cat " + Metadata.extractClassMetadata(Cat.class));
-        System.out.println("\n\nNormal class Shark " + Metadata.extractClassMetadata(Cat.class));
+
+//        Cat? maybeCat = null;
+//        System.out.println("\n\nInline Type Cat? " + Metadata.extractClassMetadata(maybeCat.class));
+
+        FlattenArrays.equalityAndToString();
+
+        FlattenArrays.flattenedArray();
+
+        Generics.wrappingInlined();
     }
 
 

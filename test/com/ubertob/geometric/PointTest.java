@@ -87,7 +87,7 @@ class PointTest {
         var p3 = p1.displace(1,1);
 
         assertEquals(p2, p3);
-    //    assertTrue(p2 == p3); //Error: value types do not support ==
+        assertTrue(p2 == p3); //Error: value types do not support ==
     }
 
     @Test
