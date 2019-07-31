@@ -40,23 +40,24 @@ inline public class SixteenCharString {
     }
 
     public String getValue(){
-        StringBuilder sb = new StringBuilder()
-                .append(c0)
-                .append(c1)
-                .append(c2)
-                .append(c3)
-                .append(c4)
-                .append(c5)
-                .append(c6)
-                .append(c7)
-                .append(c8)
-                .append(c9)
-                .append(cA)
-                .append(cB)
-                .append(cC)
-                .append(cD)
-                .append(cE)
-                .append(cF);
-        return sb.toString().trim();
+        char[] padded = new char[16];
+        int index =0;
+        padded[index++] = c0;
+        padded[index++] = c1;
+        padded[index++] = c2;
+        padded[index++] = c3;
+        padded[index++] = c4;
+        padded[index++] = c5;
+        padded[index++] = c6;
+        padded[index++] = c7;
+        padded[index++] = c8;
+        padded[index++] = c9;
+        padded[index++] = cA;
+        padded[index++] = cB;
+        padded[index++] = cC;
+        padded[index++] = cD;
+        padded[index++] = cE;
+        padded[index++] = cF;
+        return new String(padded).trim();
     }
 }
