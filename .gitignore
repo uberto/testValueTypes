@@ -1,0 +1,10 @@
+*.log
+
+out/
+
+antbuild/
+
+dist/
+
+.idea/
+.gradle/

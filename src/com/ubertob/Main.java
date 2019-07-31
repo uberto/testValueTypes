@@ -2,10 +2,7 @@ package com.ubertob;
 
 import com.ubertob.animals.Cat;
 import com.ubertob.animals.Shark;
-import com.ubertob.examples.BrowseTree;
-import com.ubertob.examples.FlattenArrays;
-import com.ubertob.examples.Generics;
-import com.ubertob.examples.Metadata;
+import com.ubertob.examples.*;
 
 public class Main {
 
@@ -50,7 +47,17 @@ public class Main {
         FlattenArrays.flattenedArray();
 
         Generics.wrappingInlined();
+
+        FlattenedStrings.userMemorySize();
+
+
     }
 
+//tree with mutable nodes (array?)
+//check single memory size (bytecode)?
+//verify streams with Qtypes
+
+//reified generics ??
+//jmb tests (mandel)
 
 }

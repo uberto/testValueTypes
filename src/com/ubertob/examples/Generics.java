@@ -17,7 +17,8 @@ public class Generics {
         var nw = ws.map(s -> s.length());
         System.out.println("Mapped Outcome " + nw.toString());
 
-        var wf = new Wrapper<Function<String, Boolean>>((String s) -> s.isEmpty() || s.isBlank());
+        Function<String, Boolean> f = (String s) -> s.isEmpty() || s.isBlank(); //inlining won't compile
+        var wf = new Wrapper<Function<String, Boolean>>(f);
 
         System.out.println("Lambda Outcome " + wf.toString());
 
