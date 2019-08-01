@@ -5,9 +5,9 @@ import com.ubertob.aggregates.User;
 public class FlattenedStrings {
 
     public static void userMemorySize() {
-        User fred = new User("Fred", 1991);
-        User mary = new User("Mary Tyler Moore", 1968);
-        User fred2 = new User("Fred ", 1991);
+        User fred = new User("Fred", "Smith");
+        User mary = new User("Mary Tyler Moore", "Moore");
+        User fred2 = new User("Fred ", "Smith");
 
         System.out.println(fred.getName());
         System.out.println(mary.getName());
