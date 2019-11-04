@@ -57,6 +57,9 @@ public class FlattenArrays {
             var memUsed = memBefore - Runtime.getRuntime().freeMemory();
             System.out.println("\nMemory for 1M InlineCoord " + memUsed); //8MB (flattened)
             System.out.println("InlineCoord default " + values[0]); //0,0
+
+           // values[1].x = 4 you cannot do this
+            values[1] = new CoordInlined(values[1].x, 4); //you can do this
         }
 
         {
@@ -81,6 +84,8 @@ public class FlattenArrays {
             var memUsed = memBefore - Runtime.getRuntime().freeMemory();
             System.out.println("\nMemory for 1M Outcome " + memUsed); //4MB (flattened)
             System.out.println("Outcome default " + lines[0]);
+
+
 
             lines[1] = new Wrapper("pippo");
             lines[2] = new Wrapper(123);
