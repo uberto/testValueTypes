@@ -44,6 +44,8 @@ public class Main {
 
         FlattenArrays.equalityAndToString();
 
+        FlattenArrays.boxesAndNullability();
+
         FlattenArrays.flattenedArray();
 
         Generics.wrappingInlined();

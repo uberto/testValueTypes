@@ -2,6 +2,7 @@ package com.ubertob.examples;
 
 
 import com.ubertob.animals.Cat;
+import com.ubertob.animals.Dog;
 import com.ubertob.generics.Wrapper;
 import com.ubertob.geometric.*;
 
@@ -41,17 +42,6 @@ public class FlattenArrays {
 
 
     public static void flattenedArray() {
-
-        var list = new ArrayList<Cat?>(); //inline types cannot be used as generic without ?
-        list.add(new Cat("another cat"));
-        try {
-            list.add(null); //Error: incompatible types: <nulltype> cannot be converted to com.ubertob.geometric.Point
-
-            System.out.printf("You can add a null to an array");
-        }catch (Exception e) {
-            System.out.println("adding a null to an array gives " + e.getMessage());
-        }
-
 
         {
             var memBefore = Runtime.getRuntime().freeMemory();
@@ -98,5 +88,21 @@ public class FlattenArrays {
             lines[4] = new Wrapper(new CoordInlined(3, 4));
         }
     }
+
+
+    public static void boxesAndNullability() {
+        var nullableCats = new ArrayList<Cat?>(); //inline types can be used as nullable with ?
+        nullableCats.add(new Cat("another cat"));
+        nullableCats.add(null); //ok
+
+        System.out.printf("You can add a null to an array of Boxed value");
+
+
+        var notNullableDogs = new ArrayList<Dog>(); //inline types cannot be used as nullable without ?
+        notNullableDogs.add(new Dog("another dog"));
+//            notNullableDogs.add(null); //Compile Error: incompatible types: <nulltype> cannot be converted to Dog
+    }
+
+
 
 }
