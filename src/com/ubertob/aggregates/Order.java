@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 inline public class Order {
     public final String id;
-    public final OrderedItem[] items;
+    public final OrderedItem[] items; //not flattened
 
     public Order(String id, OrderedItem[] items) {
         this.id = id;
