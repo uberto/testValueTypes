@@ -91,7 +91,7 @@ public class FlattenArrays {
 
 
     public static void boxesAndNullability() {
-        var nullableCats = new ArrayList<Cat?>(); //inline types can be used as nullable with ?
+        var nullableCats = new NullableCats(); //inline types can be used as nullable with ?
         nullableCats.add(new Cat("another cat"));
         nullableCats.add(null); //ok
 
@@ -102,7 +102,5 @@ public class FlattenArrays {
         notNullableDogs.add(new Dog("another dog"));
 //            notNullableDogs.add(null); //Compile Error: incompatible types: <nulltype> cannot be converted to Dog
     }
-
-
 
 }
