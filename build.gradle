@@ -9,6 +9,11 @@ targetCompatibility = '14'
 
 mainClassName = "com.ubertob.Main"
 
+
+compileJava {
+    options.compilerArgs += ["-XDallowWithFieldOperator", "-XDallowGenericsOverValues"]
+}
+
 group 'com.ubertob.testvaluetypes'
 version '1.0-SNAPSHOT'
 
@@ -20,7 +25,7 @@ repositories {
 
 
 wrapper {
-    gradleVersion = "5.6.3"
+    gradleVersion = "6.0.1"
 }
 
 

@@ -1,5 +1,9 @@
-package com.ubertob.animals;
+package ubertob.animals;
 
+import com.ubertob.animals.Animal;
+import com.ubertob.animals.Cat;
+import com.ubertob.animals.Dog;
+import com.ubertob.animals.Shark;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

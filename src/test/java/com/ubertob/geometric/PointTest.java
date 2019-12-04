@@ -1,10 +1,13 @@
-package com.ubertob.geometric;
+package ubertob.geometric;
 
+import com.ubertob.geometric.Line;
+import com.ubertob.geometric.Point;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 

@@ -1,5 +1,6 @@
-package com.ubertob.aggregates;
+package ubertob.aggregates;
 
+import com.ubertob.aggregates.User;
 import org.junit.jupiter.api.Test;
 
 public class UserTest {

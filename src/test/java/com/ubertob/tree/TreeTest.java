@@ -1,5 +1,7 @@
-package com.ubertob.tree;
+package ubertob.tree;
 
+import com.ubertob.tree.Branch;
+import com.ubertob.tree.Root;
 import org.junit.jupiter.api.Test;
 
 import java.util.Collections;
