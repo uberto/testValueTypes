@@ -2,10 +2,6 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <addNotNullAssertions enabled="false" />
-    <bytecodeTargetLevel>
-      <module name="testValueTypes.main" target="13" />
-      <module name="testValueTypes.test" target="13" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-XDallowGenericsOverValues -XDallowEmptyValues -XDallowWithFieldOperator" />
