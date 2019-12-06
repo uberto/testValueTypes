@@ -46,15 +46,9 @@ public class MiniStringTrades {
 }
 
 /*
-Ref
-885 sum by ACC88342 is 99528.0 stream
-1229 sum by ACC88342 is 99528.0 for
+563 sum by Ref with for is 132048.0
+626 sum by Ref with stream is 132048.0
+500 sum by Inline with for is 132048.0
+27 sum by MiniString with for is 132048.0
 
-Inline
-2482 sum by ACC88342 is 99528.0
-2414 sum by ACC88342 is 99528.0
-
-Mini
-1022 sum by ACC88342 is 99528.0
-1485 sum by ACC88342 is 99528.0
  */
