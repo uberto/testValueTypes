@@ -1,8 +1,6 @@
 package com.ubertob;
 
-import com.ubertob.animals.Cat;
-import com.ubertob.animals.Shark;
-import com.ubertob.examples.*;
+import com.ubertob.ministring.TradeRepository;
 
 public class Main {
 
@@ -33,25 +31,30 @@ public class Main {
 
     public static void main(String[] args) {
 
-        BrowseTree.recursiveCalls();
+//        BrowseTree.recursiveCalls();
+//
+//
+//        System.out.println("\n\nNormal class Shark " + Metadata.extractClassMetadata(Shark.class));
+//        System.out.println("\n\nInline Type Cat " + Metadata.extractClassMetadata(Cat.class));
+//
+////        Cat? maybeCat = null;
+////        System.out.println("\n\nInline Type Cat? " + Metadata.extractClassMetadata(maybeCat.class));
+//
+//        FlattenArrays.equalityAndToString();
+//
+//        FlattenArrays.boxesAndNullability();
+//
+//        FlattenArrays.flattenedArray();
+//
+//        Generics.wrappingInlined();
+//
+//        FlattenedStrings.userMemorySize();
 
 
-        System.out.println("\n\nNormal class Shark " + Metadata.extractClassMetadata(Shark.class));
-        System.out.println("\n\nInline Type Cat " + Metadata.extractClassMetadata(Cat.class));
-
-//        Cat? maybeCat = null;
-//        System.out.println("\n\nInline Type Cat? " + Metadata.extractClassMetadata(maybeCat.class));
-
-        FlattenArrays.equalityAndToString();
-
-        FlattenArrays.boxesAndNullability();
-
-        FlattenArrays.flattenedArray();
-
-        Generics.wrappingInlined();
-
-        FlattenedStrings.userMemorySize();
-
+        System.out.println("1");
+        var tr = new TradeRepository();
+        tr.preparingData();
+        System.out.println("2");
 
     }
 
