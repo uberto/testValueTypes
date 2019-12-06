@@ -1,13 +1,16 @@
 package com.ubertob.ministring;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 public class TradeRepository {
     int arraySize = 10_000_000;
 
-    Trade[] tradesWithRef = new TradeRef[arraySize];
-    Trade[] tradesInline = new TradeInline[arraySize];
-    Trade[] tradesMiniString = new TradeMiniString[arraySize];
+    public TradeRef[] tradesWithRef = new TradeRef[arraySize];
+    public TradeInline[] tradesInline = new TradeInline[arraySize];
+    public TradeMiniString[] tradesMiniString = new TradeMiniString[arraySize];
 
     Random random = new Random();
 
@@ -16,21 +19,27 @@ public class TradeRepository {
         for (int i = 0; i < arraySize; i++) {
 
             var t = randomTrade();
-            tradesWithRef[i] = t;
-            tradesInline[i]= new TradeInline(t.amount, t.account, t.security);
-            tradesMiniString[i]= new TradeMiniString(t.amount, t.account, t.security);
+            tradesWithRef[i] = new TradeRef(t.getAmount(), t.getAccount(), t.getSecurity());
+            tradesInline[i]= new TradeInline(t.getAmount(), t.getAccount(), t.getSecurity());
+            tradesMiniString[i]= new TradeMiniString(t.getAmount(), t.getAccount(), t.getSecurity());
         }
 
-//        on eachone
-//        sum all trades for an account
-//        sum all trades for a security
+        shuffleArray(tradesWithRef);
+        shuffleArray(tradesInline);
+        shuffleArray(tradesMiniString);
 
     }
 
-    private TradeRef randomTrade() {
+    private void shuffleArray(Trade[] array) {
+        List<Trade> list = Arrays.asList(array);
+        Collections.shuffle(list);
+        list.toArray(array);
+    }
+
+    private Trade randomTrade() {
         int r = random.nextInt(100_000);
 
-        return new TradeRef(100_000_000 / (r + 1), "ACC"+r, "SEC"+r);
+        return new TradeMiniString(100_000_000 / (r + 1), "ACC"+r, "SEC"+r);
     }
 
 

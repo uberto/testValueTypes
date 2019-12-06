@@ -1,6 +1,6 @@
 package com.ubertob;
 
-import com.ubertob.ministring.TradeRepository;
+import static com.ubertob.examples.MiniStringTrades.generatingTradesAndBrowing;
 
 public class Main {
 
@@ -17,22 +17,9 @@ public class Main {
 //  class file for java.lang.invoke.ValueBootstrapMethods not found
 //you need source =14
 
-
-
-//    Error:IntelliLang Pattern Validator: Error: java.lang.IllegalArgumentException
-//    java.lang.IllegalArgumentException
-//    at org.jetbrains.org.objectweb.asm.Type.getTypeInternal(Type.java:440)
-    //fix: -Dcompiler.process.jdk=/home/ubertobarbini/jvm/jdk-14-valhalla
-//
-//    Error:IntelliLang Pattern Validator: Error: java.lang.IllegalArgumentException
-//    java.lang.IllegalArgumentException
-//    at org.jetbrains.org.objectweb.asm.Type.getTypeInternal(Type.java:440)
-//fix ??
-
     public static void main(String[] args) {
 
 //        BrowseTree.recursiveCalls();
-//
 //
 //        System.out.println("\n\nNormal class Shark " + Metadata.extractClassMetadata(Shark.class));
 //        System.out.println("\n\nInline Type Cat " + Metadata.extractClassMetadata(Cat.class));
@@ -51,18 +38,11 @@ public class Main {
 //        FlattenedStrings.userMemorySize();
 
 
-        System.out.println("1");
-        var tr = new TradeRepository();
-        tr.preparingData();
-        System.out.println("2");
+        generatingTradesAndBrowing();
 
     }
 
-//tree with mutable nodes (array?)
 //check single memory size (bytecode)?
 //verify streams with Qtypes
-
-//reified generics ??
-//jmb tests (mandel)
 
 }
