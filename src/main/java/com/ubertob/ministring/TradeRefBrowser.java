@@ -2,10 +2,10 @@ package com.ubertob.ministring;
 
 import java.util.Arrays;
 
-public class TradeBrowserRef {
+public class TradeRefBrowser {
     final Trade[] repo;
 
-    public TradeBrowserRef(Trade[] repo) {
+    public TradeRefBrowser(Trade[] repo) {
         this.repo = repo;
     }
 

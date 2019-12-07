@@ -17,7 +17,7 @@ inline public class MiniString {
     public static final int MINI_STR_BASE = 64;
     public static final String letters = "=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 _-!?.$&%@#:[]{}()*<>:;',/^";
 
-    private static long encode(String str) {
+    public static long encode(String str) {
         String prepared = prepareString(str);
         long encoded = 0;
         for (char c : prepared.toCharArray()) {
@@ -38,7 +38,7 @@ inline public class MiniString {
         return prepared.toString();
     }
 
-    private static String decode(long number) {
+    public static String decode(long number) {
         StringBuilder decoded = new StringBuilder();
         long remaining = number;
 

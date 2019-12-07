@@ -6,9 +6,10 @@ import java.util.List;
 import java.util.Random;
 
 public class TradeRepository {
-    int arraySize = 10_000_000;
+    int arraySize = 1_000_000;
 
-    public TradeRef[] tradesWithRef = new TradeRef[arraySize];
+    public TradeRef[] tradeRefs = new TradeRef[arraySize];
+    public TradeRefEncoded[] tradesRefEncoded = new TradeRefEncoded[arraySize];
     public TradeInline[] tradesInline = new TradeInline[arraySize];
     public TradeMiniString[] tradesMiniString = new TradeMiniString[arraySize];
 
@@ -19,19 +20,21 @@ public class TradeRepository {
         for (int i = 0; i < arraySize; i++) {
 
             var t = randomTrade();
-            tradesWithRef[i] = new TradeRef(t.getAmount(), t.getAccount(), t.getSecurity());
+            tradeRefs[i] = new TradeRef(t.getAmount(), t.getAccount(), t.getSecurity());
+            tradesRefEncoded[i] = new TradeRefEncoded(t.getAmount(), t.getAccount(), t.getSecurity());
             tradesInline[i]= new TradeInline(t.getAmount(), t.getAccount(), t.getSecurity());
             tradesMiniString[i]= new TradeMiniString(t.getAmount(), t.getAccount(), t.getSecurity());
         }
 
-        shuffleArray(tradesWithRef);
+        shuffleArray(tradeRefs);
+        shuffleArray(tradesRefEncoded);
         shuffleArray(tradesInline);
         shuffleArray(tradesMiniString);
 
     }
 
-    private void shuffleArray(Trade[] array) {
-        List<Trade> list = Arrays.asList(array);
+    private <T> void  shuffleArray(T[] array) {
+        List<T> list = Arrays.asList(array);
         Collections.shuffle(list);
         list.toArray(array);
     }
