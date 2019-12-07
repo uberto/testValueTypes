@@ -23,11 +23,11 @@ public class MiniStringTrades {
             cronoSum(() -> searcherRef.sumByAccountStream(account), "Ref with stream");
             cronoSum(() -> searcherRef.sumByAccountFor(account), "Ref with for");
 
+            cronoSum(() -> searcherRefEncoded.sumByAccountFor(account), "RefEncoded with for");
+            cronoSum(() -> searcherRefEncoded.sumByAccountStream(account), "RefEncoded with stream");
+
             cronoSum(() -> searcherInline.sumByAccountFor(account), "Inline with for");
 //            cronoSum(() -> searcherInline.sumByAccountStream(account), "Inline with stream");
-
-//            cronoSum(() -> searcherRefEncoded.sumByAccountFor(account), "RefEncoded with for");
-            cronoSum(() -> searcherRefEncoded.sumByAccountStream(account), "RefEncoded with stream");
 
             cronoSum(() -> searcherMiniString.sumByAccountFor(account), "MiniString with for");
 //            cronoSum(() -> searcherMiniString.sumByAccountStream(account), "MiniString with stream");
@@ -47,9 +47,11 @@ public class MiniStringTrades {
 }
 
 /*
-626 sum by Ref with stream is 132048.0
-563 sum by Ref with for is 132048.0
-500 sum by Inline with for is 132048.0
-27 sum by MiniString with for is 132048.0
+250 sum by Ref with stream is 4.71527595E8
+262 sum by Ref with for is 4.71527595E8
+154 sum by RefEncoded with for is 4.71527595E8
+149 sum by RefEncoded with stream is 4.71527595E8
+44 sum by Inline with for is 4.71527595E8
+7 sum by MiniString with for is 4.71527595E8
 
  */
