@@ -3,9 +3,9 @@ package com.ubertob.ministring;
 import java.util.Arrays;
 
 public class TradeRefBrowser {
-    final Trade[] repo;
+    final TradeRef[] repo;
 
-    public TradeRefBrowser(Trade[] repo) {
+    public TradeRefBrowser(TradeRef[] repo) {
         this.repo = repo;
     }
 
@@ -19,8 +19,9 @@ public class TradeRefBrowser {
     public double sumByAccountFor(String account){
         double res = 0;
         for (int i = 0; i < repo.length; i++) {
-            if (repo[i].getAccount().equals(account))
-                res = res + repo[i].getAmount();
+            TradeRef tradeRef = repo[i];
+            if (tradeRef.account.equals(account))
+                res = res + tradeRef.amount;
         }
         return res;
     }

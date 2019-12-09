@@ -1,6 +1,6 @@
 package com.ubertob.ministring;
 
-inline public class TradeMiniString implements Trade {
+inline public class TradeMiniString{
     final double amount;
     final MiniString account;
     final MiniString security;
@@ -9,20 +9,5 @@ inline public class TradeMiniString implements Trade {
         this.amount = amount;
         this.account = new MiniString(account);
         this.security = new MiniString(security);
-    }
-
-    @Override
-    public double getAmount() {
-        return amount;
-    }
-
-    @Override
-    public String getAccount() {
-        return account.get();
-    }
-
-    @Override
-    public String getSecurity() {
-        return security.get();
     }
 }

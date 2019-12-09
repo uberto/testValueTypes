@@ -17,23 +17,26 @@ public class MiniStringTrades {
         var searcherRefEncoded = new TradeRefEncodedBrowser(tr.tradesRefEncoded);
         var searcherMiniString = new MiniStringTradeBrowser(tr.tradesMiniString);
 
-        var account = tr.tradeRefs[1000].getAccount();
+        var account = tr.tradeRefs[1000].account;
 
         while (true) {
-            cronoSum(() -> searcherRef.sumByAccountStream(account), "Ref with stream");
-            cronoSum(() -> searcherRef.sumByAccountFor(account), "Ref with for");
-
-            cronoSum(() -> searcherRefEncoded.sumByAccountFor(account), "RefEncoded with for");
-            cronoSum(() -> searcherRefEncoded.sumByAccountStream(account), "RefEncoded with stream");
-
-            cronoSum(() -> searcherInline.sumByAccountFor(account), "Inline with for");
-//            cronoSum(() -> searcherInline.sumByAccountStream(account), "Inline with stream");
-
-            cronoSum(() -> searcherMiniString.sumByAccountFor(account), "MiniString with for");
-//            cronoSum(() -> searcherMiniString.sumByAccountStream(account), "MiniString with stream");
-
+            benchmarks(searcherRef, searcherInline, searcherRefEncoded, searcherMiniString, account);
         }
 
+    }
+
+    private static void benchmarks(TradeRefBrowser searcherRef, InlineTradeBrowser searcherInline, TradeRefEncodedBrowser searcherRefEncoded, MiniStringTradeBrowser searcherMiniString, String account) {
+        cronoSum(() -> searcherRef.sumByAccountFor(account), "Ref with for");
+//        cronoSum(() -> searcherRef.sumByAccountStream(account), "Ref with stream");
+
+        cronoSum(() -> searcherRefEncoded.sumByAccountFor(account), "RefEncoded with for");
+//            cronoSum(() -> searcherRefEncoded.sumByAccountStream(account), "RefEncoded with stream");
+
+        cronoSum(() -> searcherInline.sumByAccountFor(account), "Inline with for");
+//            cronoSum(() -> searcherInline.sumByAccountStream(account), "Inline with stream");
+
+        cronoSum(() -> searcherMiniString.sumByAccountFor(account), "MiniString with for");
+//            cronoSum(() -> searcherMiniString.sumByAccountStream(account), "MiniString with stream");
     }
 
     private static void cronoSum(Supplier<Double> searcher, String desc) {

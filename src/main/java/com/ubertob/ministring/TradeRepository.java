@@ -27,10 +27,10 @@ public class TradeRepository {
         for (int i = 0; i < arraySize; i++) {
 
             var t = randomTrade();
-            tradeRefs[i] = new TradeRef(t.getAmount(), t.getAccount(), t.getSecurity());
-            tradesRefEncoded[i] = new TradeRefEncoded(t.getAmount(), t.getAccount(), t.getSecurity());
-            tradesInline[i]= new TradeInline(t.getAmount(), t.getAccount(), t.getSecurity());
-            tradesMiniString[i]= new TradeMiniString(t.getAmount(), t.getAccount(), t.getSecurity());
+            tradeRefs[i] = new TradeRef(t.amount, t.account, t.security);
+            tradesRefEncoded[i] = new TradeRefEncoded(t.amount, t.account, t.security);
+            tradesInline[i]= new TradeInline(t.amount, t.account, t.security);
+            tradesMiniString[i]= new TradeMiniString(t.amount, t.account, t.security);
         }
 
         shuffleArray(tradeRefs);
@@ -45,7 +45,7 @@ public class TradeRepository {
         list.toArray(array);
     }
 
-    private Trade randomTrade() {
+    private TradeRef randomTrade() {
         int r = random.nextInt(100_000);
 
         return new TradeRef(100_000_000 / (r + 1), accounts[r % ACCOUNTS_SIZE], "SEC_"+r);

@@ -1,6 +1,6 @@
 package com.ubertob.ministring;
 
-inline public class TradeInline implements Trade {
+inline public class TradeInline {
     final double amount;
     final String account;
     final String security;
@@ -9,20 +9,5 @@ inline public class TradeInline implements Trade {
         this.amount = amount;
         this.account = account;
         this.security = security;
-    }
-
-    @Override
-    public double getAmount() {
-        return amount;
-    }
-
-    @Override
-    public String getAccount() {
-        return account;
-    }
-
-    @Override
-    public String getSecurity() {
-        return security;
     }
 }

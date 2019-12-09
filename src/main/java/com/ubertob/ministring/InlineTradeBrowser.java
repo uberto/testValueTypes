@@ -19,8 +19,9 @@ public class InlineTradeBrowser {
     public double sumByAccountFor(String account){
         double res = 0;
         for (int i = 0; i < repo.length; i++) {
-            if (repo[i].account.equals(account))
-                res = res + repo[i].amount;
+            TradeInline tradeInline = repo[i];
+            if (tradeInline.account.equals(account))
+                res = res + tradeInline.amount;
         }
         return res;
     }

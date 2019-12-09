@@ -14,9 +14,8 @@ inline public class Wrapper<T> {
         return new Wrapper<>(f.apply(value));
     }
 
-    //doesn't compile error: unexpected type
-//    public Wrapper<T> flatMap(Function<T, Wrapper<T>> f){
-//        return f.apply(value);
-//    }
+    public Wrapper<T> flatMap(Function<T, Wrapper<T>> f){
+        return f.apply(value);
+    }
 
 }

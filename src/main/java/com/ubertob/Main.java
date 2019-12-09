@@ -42,7 +42,5 @@ public class Main {
 
     }
 
-//check single memory size (bytecode)?
-//verify streams with Qtypes
 
 }
