@@ -18,7 +18,7 @@ public class TradeRepository {
 
     Random random = new Random();
 
-    public void preparingData(){
+    public void fillWithRandomData(){
 
         for (int i = 0; i < ACCOUNTS_SIZE; i++) {
             accounts[i] = "ACCOUNT_" + i;

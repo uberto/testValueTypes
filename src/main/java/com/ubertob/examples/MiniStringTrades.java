@@ -10,7 +10,7 @@ public class MiniStringTrades {
 
         var tr = new TradeRepository();
 
-        tr.preparingData();
+        tr.fillWithRandomData();
 
         var searcherRef = new TradeRefBrowser(tr.tradeRefs);
         var searcherInline = new InlineTradeBrowser(tr.tradesInline);
@@ -22,15 +22,14 @@ public class MiniStringTrades {
         while (true) {
             benchmarks(searcherRef, searcherInline, searcherRefEncoded, searcherMiniString, account);
         }
-
     }
 
     private static void benchmarks(TradeRefBrowser searcherRef, InlineTradeBrowser searcherInline, TradeRefEncodedBrowser searcherRefEncoded, MiniStringTradeBrowser searcherMiniString, String account) {
         cronoSum(() -> searcherRef.sumByAccountFor(account), "Ref with for");
-        cronoSum(() -> searcherRef.sumByAccountStream(account), "Ref with stream");
+//        cronoSum(() -> searcherRef.sumByAccountStream(account), "Ref with stream");
 
         cronoSum(() -> searcherRefEncoded.sumByAccountFor(account), "RefEncoded with for");
-            cronoSum(() -> searcherRefEncoded.sumByAccountStream(account), "RefEncoded with stream");
+//        cronoSum(() -> searcherRefEncoded.sumByAccountStream(account), "RefEncoded with stream");
 
         cronoSum(() -> searcherInline.sumByAccountFor(account), "Inline with for");
 //            cronoSum(() -> searcherInline.sumByAccountStream(account), "Inline with stream");
@@ -50,11 +49,9 @@ public class MiniStringTrades {
 }
 
 /*
-250 sum by Ref with stream is 4.71527595E8
-262 sum by Ref with for is 4.71527595E8
-154 sum by RefEncoded with for is 4.71527595E8
-149 sum by RefEncoded with stream is 4.71527595E8
-44 sum by Inline with for is 4.71527595E8
-7 sum by MiniString with for is 4.71527595E8
+145 sum by Ref with for is 4.5843963E8
+41 sum by RefEncoded with for is 4.5843963E8
+24 sum by Inline with for is 4.5843963E8
+7 sum by MiniString with for is 4.5843963E8
 
  */
