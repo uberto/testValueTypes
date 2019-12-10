@@ -11,8 +11,8 @@ public class TradeRefBrowser {
 
     public double sumByAccountStream(String account){
         return Arrays.stream(repo)
-                .filter( trade -> trade.getAccount().equals(account))
-                .map(trade -> trade.getAmount())
+                .filter( trade -> trade.account.equals(account))
+                .map(trade -> trade.amount)
                 .reduce(0.0, (a, b) -> a+b);
     }
 
